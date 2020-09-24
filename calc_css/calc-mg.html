@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <title>PCY - CSS Module</title>
+    <link href="css/globalstyles.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/737c90f2f1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="pcy-calc-nav">
+        <div class="pcy-calc-nav-container">
+            <a class="pcy-calc-nav-logo" href="index.html">계산기</a>
+            
+            <ul class="pcy-calc-nav-link">
+                <li><a href="calc-mg.html">마진율계산기</a></li>
+                <li><a href="rangking.html">랭킹추적</a></li>
+                <li><a href="calc-pf-local.html">순수익계산기(무료)</a></li>
+                <li><a href="calc-pf-json.html">순수익계산기(유료)</a></li>
+                <li><a href="calc-ap.html">상품등록</a></li>
+                <li><a href="calc-am.html">마켓등록</a></li>
+            </ul>
+            
+        </div>
+    </nav>
+    <div class="pcy-container">
+    <header>
+        
+    </header>
+    <main>
+        <div class="pcy-calc-container">
+            <div class="pcy-calc-form-Gr">
+                <div class="pcy-calc-input-Gr">
+                    <div class="pcy-calc-input-box">
+                        <div class="pcy-calc-input-label">
+                            판매가격
+                        </div>
+                        <div class="pcy-calc-input-unit-box">
+                            <span class="pcy-calc-input-unit-text">‎₩</span>
+                            <input class="pcy-calc-input-unit" placeholder="100000" />
+                        </div>
+                    </div>
+                    <div class="pcy-calc-input-box">
+                        <div class="pcy-calc-input-label">
+                            판매자 부담 운임비
+                        </div>
+
+                        <div class="pcy-calc-input-unit-box">
+                            <span class="pcy-calc-input-unit-text">‎₩</span>
+                            <input class="pcy-calc-input-unit" placeholder="10000" />
+                        </div>
+                    </div>
+                    <div class="pcy-calc-input-box">
+                        <div class="pcy-calc-input-label">
+                            구매자 부담 운임비
+                        </div>
+
+                        <div class="pcy-calc-input-unit-box">
+                            <span class="pcy-calc-input-unit-text">‎₩</span>
+                            <input class="pcy-calc-input-unit" placeholder="10000" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pcy-calc-form-Gr">
+                <div class="pcy-calc-input-Gr">
+                    <div class="pcy-calc-input-box">
+                        <div class="pcy-calc-input-label">
+                            매입가격
+                        </div>
+
+                        <div class="pcy-calc-input-unit-box">
+                            <span class="pcy-calc-input-unit-text">‎₩</span>
+                            <input class="pcy-calc-input-unit" placeholder="50000" />
+                        </div>
+                    </div>
+                    <div class="pcy-calc-input-box">
+                        <div class="pcy-calc-input-label">
+                            매입 운송비용
+                        </div>
+                        <div class="pcy-calc-input-unit-box">
+                            <span class="pcy-calc-input-unit-text">‎₩</span>
+                            <input class="pcy-calc-input-unit" placeholder="10000" />
+                        </div>
+                    </div>
+                    <div class="pcy-calc-input-box">
+                        <div class="pcy-calc-input-label">
+                            기타비용
+                        </div>
+                        <div class="pcy-calc-input-unit-box">
+                            <span class="pcy-calc-input-unit-text">‎₩</span>
+                            <input class="pcy-calc-input-unit" placeholder="10000" />
+                        </div>
+                    </div>
+                    <div class="pcy-calc-input-box">
+                        <div class="pcy-calc-input-label">
+                            오픈마켓 수수료
+                        </div>
+                        <div class="pcy-calc-input-unit-box">
+                            <span class="pcy-calc-input-unit-text">‎%</span>
+                            <input class="pcy-calc-input-unit" placeholder="7.8" />
+                        </div>
+                    </div>
+                    <div class="pcy-calc-button-send" href="#" role="calc-button-send">
+                        <div class="pcy-calc-button-send-span">계산하기</div>
+                        <div class="pcy-calc-button-send-icon">
+                            <i href="#" class="pcy-calc-button-send-fa pcy-calc-button-send-fa-remove">
+                                <i class="fas fa-calculator"></i>
+                            </i>
+                            <i href="#" class="pcy-calc-button-send-fa pcy-calc-button-send-fa-check">
+                                <i class="fas fa-calculator"></i>
+                            </i>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            <div class="pcy-calc-form-Gr pcy-calc-result-border">
+                <div class="pcy-calc-result-box">
+                    <div class="pcy-calc-result-box-header">
+                        <div class="pcy-calc-result-box-header-label">
+                            예상 최종 마진액 (세후)
+                        </div>
+                        <div class="pcy-calc-result-box-header-content">
+                            36576 (원)
+                        </div>
+                    </div>
+                    <div class="pcy-calc-result-wrapper">
+                        <div class="pcy-calc-result-element">
+                            <div class="pcy-calc-result-element-label">
+                                마진(세전)
+                            </div>
+                            <div class="pcy-calc-result-content">
+                                40460 (원)
+                            </div>
+                        </div>
+                        <div class="pcy-calc-result-element">
+                            <div class="pcy-calc-result-element-label">
+                                마진율 (세전)
+                            </div>
+                            <div class="pcy-calc-result-content">
+                                33.87 (%)
+                            </div>
+                        </div>
+                        <div class="pcy-calc-result-element">
+                            <div class="pcy-calc-result-element-label">
+                                VAT(10%)
+                            </div>
+                            <div class="pcy-calc-result-content">
+                                4046 (원)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pcy-calc-result-footer">
+                        <div class="pcy-calc-result-copy">
+                            <button class="pcy-calc-result-copy-btn">
+                                결과복사
+                            </button>
+                        </div>
+                        <div class="pcy-calc-result-refresh">
+                            <button class="pcy-calc-result-refresh-btn">
+                                초기화
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+</div>
+</body>
+
+</html>

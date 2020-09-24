@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/globalstyles.css" />
+    <title>PCY - Calc__CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <!-- <script src="resources/js/plugin/datepicker/bootstrap-datepicker.kr.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script type="text/javascript"
+        src="https://unpkg.com/@cubejs-client/core@0.10.16/dist/cubejs-client-core.umd.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script src="https://kit.fontawesome.com/737c90f2f1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="pcy-calc-nav">
+        <div class="pcy-calc-nav-container">
+            <a class="pcy-calc-nav-logo" href="index.html">계산기</a>
+
+            <ul class="pcy-calc-nav-link">
+                <li><a href="calc-mg.html">마진율계산기</a></li>
+                <li><a href="rangking.html">랭킹추적</a></li>
+                <li><a href="calc-pf-local.html">순수익계산기(무료)</a></li>
+                <li><a href="calc-pf-json.html">순수익계산기(유료)</a></li>
+                <li><a href="calc-ap.html">상품등록</a></li>
+                <li><a href="calc-am.html">마켓등록</a></li>
+            </ul>
+
+        </div>
+    </nav>
+    <div class="pcy-container pcy-container-pf">
+        <main>
+            <!-- 순수익차트 랜덤숫자나오는곳에 순수익디비만 연결하면됨-->
+            <div class="pcy-pf-chart-box">
+                <!-- <input type="text" class="pcy-input pcy-pf-date" id="pcy-pf-date"name="pcy-pf-date"/>
+            <canvas id="pcy-pf-chart"></canvas> -->
+            </div>
+            <!-- 순수익테이블 -->
+            <div class="pcy-pf-table-header">
+                <div class="pcy-pf-table-header-left">
+                    <!-- category dropbox -->
+                    <div class="pcy-pf-marketSelect" id="pcy-pf-marketSelect">
+                        <ul class="pcy-pf-marketSelect-all-ul">
+                            <li class="pcy-pf-marketSelect-all-li">
+                                <a href="#">오픈마켓</a>
+                                <ul class="pcy-pf-marketSelect-market-ul" id="pcy-pf-marketSelect-market-ul">
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- select items -->
+                    <!-- <div class="pcy-pf-itemSelect-box pcy-input">
+                    <span class="pcy-pf-itemSelect-unit"><i class="fas fa-search"></i></span>
+                    <input class="pcy-pf-itemSelect-input" />
+                </div> -->
+                
+                </div>
+                
+            </div>
+            <div class="pcy-pf-sticky-y">
+                <form class="pcy-pf-form" id="pcy-pf-form">
+                    <table class="pcy-pf-container pcy-pf-sticky-y">
+                        <thead class="pcy-pf-thead">
+                            <tr class="pcy-pf-tr">
+                                <th>상품이미지</th>
+                                <th>상품명</th>
+                                <th>마진액</th>
+                                <th>판매개수</th>
+                                <th>광고비용</th>
+                                <th>판매비용</th>
+                                <th>이익</th>
+                            </tr>
+                        </thead>
+                        <tbody class="pcy-pf-tbody" id="pcy-pf-tbody">
+                        </tbody>
+                    </table>
+
+                </form>
+                <!-- 총수익푸터 -->
+                <div class="pcy-pf-result-container">
+
+                    <div class="pcy-pf-result-box">
+                        <div class="pcypf-result-label">총수익</div>
+                        <div class="pcy-pf-result-margin" id="pcy-pf-result-margin">
+                            0원
+                        </div>
+                    </div>
+                    <div class="pcy-pf-result-box">
+                        <div class="pcy-pf-result-emoji">
+                            <i class="fas fa-minus"></i>
+                        </div>
+                    </div>
+                    <div class="pcy-pf-result-box">
+                        <div class="pcypf-result-label">총광고비용</div>
+                        <div class="pcy-pf-result-adCost" id="pcy-pf-result-adCost">
+                            0원
+                        </div>
+                    </div>
+
+                    <div class="pcy-pf-result-box">
+                        <div class="pcy-pf-result-emoji">
+                            <i class="fas fa-minus"></i>
+                        </div>
+                    </div>
+                    <div class="pcy-pf-result-box">
+                        <div class="pcypf-result-label">총판매비용</div>
+                        <div class="pcy-pf-result-saleCost" id="pcy-pf-result-saleCost">
+                            0원
+                        </div>
+                    </div>
+                    <div class="pcy-pf-result-box">
+                        <div class="pcy-pf-result-emoji">
+                            <i class="fas fa-equals"></i>
+                        </div>
+                    </div>
+                    <div class="pcy-pf-result-box">
+                        <div class="pcypf-result-label">총이익</div>
+                        <div class="pcy-pf-result-netProfit" id="pcy-pf-result-netProfit">
+                            0원
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    </div>
+</body>
+    <!-- <script src="calc-pf-dateChart.js"></script> -->
+
+    <script type="text/javascript" src="calc-itemsData.js"></script>
+    <script type="text/javascript" src="calc-pf-marketSelect.js"></script>
+    <!-- <script type="text/javascript" src="calc-pf-tableInInput.js"></script> -->
+    <script type="text/javascript" src="calc-pf-totalAmount.js"></script>
+    <script type="text/javascript" src="calc-pf-showItem.js"></script>
+
+
+</html>

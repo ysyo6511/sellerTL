@@ -1,0 +1,337 @@
+
+/* #pcy-pf-numberOfSales{
+    border:none;
+} */
+/* 테이블 인풋  */
+.pcy-input-showing,
+.pcy-pf-itemName-result,
+.pcy-pf-profitMargin-result,
+.pcy-pf-numberOfSales-result,
+.pcy-pf-adCost-result,
+.pcy-pf-saleCost-result,
+.pcy-pf-netProfit,
+.pcy-pf-netProfit-btn,
+.pcy-h4-showing
+{
+    display: none;
+}
+
+.showing{
+    display: block;
+    text-align: center;
+}
+
+/* table-header */
+.pcy-pf-table-header{
+    display: flex;
+    justify-content: space-between;
+    height: 58px;
+    position: relative;
+    z-index:50;
+}
+
+.pcy-pf-table-header-left{
+    display: flex;
+    margin:8px 4px;
+
+}
+
+.pcy-pf-marketSelect{
+    margin-right: 4px;
+    background-color:#002c40;
+    border-radius: 4px;
+}
+
+.pcy-pf-marketSelect ul{
+    width:140px;
+    padding:0px;
+    margin:0px;
+    list-style:none;
+    font-weight: 400;
+    color:#002c40;
+}
+
+.pcy-pf-marketSelect ul li{
+    width:140px;
+    line-height: 40px;
+    text-align: center;
+    background-color:#002c40;
+    color:white;
+    /* border-top: 1px solid white; */
+}
+
+.pcy-pf-marketSelect ul li:last-child{
+    border-radius: 0 0 4px 4px;
+}
+
+.pcy-pf-marketSelect ul li:first-child{
+    border-radius: 4px;
+}
+
+.pcy-pf-marketSelect ul li ul li{
+    /* border-top:none; */
+    border-radius: none;
+}
+
+.pcy-pf-marketSelect ul li a {
+    text-decoration: none;
+    display:block;
+}
+
+.pcy-pf-marketSelect ul li ul li{
+    display: none;
+}
+
+.pcy-pf-marketSelect ul li:hover ul li{
+    display: block;
+  
+}
+
+
+.pcy-pf-marketSelect ul li ul li a:hover{ 
+
+    opacity: 0.5;
+}
+
+/* find item */
+.pcy-pf-itemSelect-box{
+    display: flex;
+    width:140px;
+    outline: none;
+}
+
+.pcy-pf-itemSelect-box:active{
+    height: 1000px;
+}
+
+.pcy-pf-itemSelect-unit{
+    /* border: 2px solid #002c40; */
+    
+}
+
+.pcy-pf-itemSelect-input{
+    outline: none;
+    border:none;
+    background-color: transparent;
+}
+
+
+.pcy-container-pf{
+    padding-bottom:10%;
+}
+/* sticky-y */
+
+.pcy-pf-sticky-y{
+    position: relative;
+    z-index:0;
+     overflow-y: scroll;
+     width:100%;
+     max-height:25rem;
+     border-radius: 4px;
+     box-shadow:  0 -60px 60px -60px rgba(0, 0, 0, 0.25) inset;
+ }
+.pcy-pf-container {
+     border-collapse: collapse;
+     font-size: 1rem;
+     
+ }
+.pcy-pf-container .pcy-pf-thead .pcy-pf-tr {
+     color: #ffffff;
+     font-weight: bold;
+     border-radius: 4px;
+ }
+
+ .pcy-pf-td-box .pcy-pf-input{
+    background-color: transparent;
+    border-radius: 0px;
+    border:none;
+    border-bottom: 2px solid #002c40;
+ }
+
+ .pcy-pf-td-box .pcy-input{
+    width:5rem;
+    margin:auto;
+ }
+
+ .pcy-pf-netProfit-btn{
+     margin:auto;
+ }
+.pcy-pf-chart-box .pcy-input  {
+     padding:6px 12px;
+     text-align: center;
+     font-weight: 500;
+ }
+
+.pcy-pf-container th{
+     background-color: #002c40;
+     position: sticky; 
+     top:0px;   
+ }
+
+.pcy-pf-container th, .pcy-pf-container td {
+     padding: 12px 15px;
+     text-align: center;
+ }
+
+.pcy-pf-tr {
+     border-bottom: 1px solid #dddddd;
+     table-layout: fixed; 
+
+ }
+
+ 
+
+.pcy-pf-itemImg{
+    padding: 3px;
+    vertical-align: middle;
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.pcy-pf-netProfit-btn{
+    outline:none;
+    border:none;
+    background-color:transparent;
+    color:#002c40;
+}
+
+
+/* result no items */
+.pcy-pf-resultNoItem-container{
+    background-color: #eff2f5c9;
+text-align: center;
+
+}
+
+.pcy-pf-resultNoItem{
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+/* total profit footer */
+.pcy-pf-result-container{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+     bottom: 0; 
+     left:0;
+     height: 14%;
+     width: 100%;
+    color:white;
+    padding:1.2rem 8rem;
+    background-color:#002c40;
+}
+
+.pcy-pf-result-box{
+    display: inline-block;
+    font-weight: 400;
+    color: white;
+}
+
+.pcypf-result-label{
+    font-size:12px;
+    text-align: left;
+    padding:3px 6px;
+}
+
+.pcy-pf-result-box{
+    font-size:34px;
+}
+
+.pcy-pf-result-emoji{
+    position: relative;
+    bottom:-10px;
+    font-size:34px;
+    height: 100%;
+    vertical-align: text-bottom;
+}
+
+/* 참고 */
+/* 모바일화면 */
+ @media 
+only screen and (max-width: 600px){
+
+    
+
+    /* Force table to not be like tables anymore */
+    
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+    }
+    .pcy-pf-itemImg{
+        display: none;
+    }
+
+    .pcy-pf-container td {
+        padding:3px; 
+        padding-left:50%;
+    }
+    
+    .pcy-pf-td-box .pcy-input{
+        padding:0px;
+    }
+
+    .pcy-pf-td-box h4{
+        margin:0px;
+    }
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+    }
+
+	td:nth-of-type(2):before { content: "상품명"; }
+	td:nth-of-type(3):before { content: "마진액"; }
+	td:nth-of-type(4):before { content: "판매개수"; }
+	td:nth-of-type(5):before { content: "광고비용"; }
+	td:nth-of-type(6):before { content: "판매비용"; }
+    td:nth-of-type(7):before { content: "이익"; }
+    
+    /* totla profit footer */
+    .pcy-pf-netProfit-btn{
+        /* text-align:center; */
+        margin:auto;
+    }
+
+    .pcy-pf-result-container{
+        padding:0.4rem 1rem;
+    }
+
+    .pcypf-result-label{
+        font-size:0.7rem;
+        text-align: left;
+        padding:0px;
+    }
+    
+    .pcy-pf-result-box{
+        font-size:1rem;
+    }
+    
+    .pcy-pf-result-emoji{
+
+        font-size:1rem;
+ 
+    }
+}

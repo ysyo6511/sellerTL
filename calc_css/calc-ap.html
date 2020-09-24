@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/globalstyles.css" />
+    <title>PCY - Calc__CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://kit.fontawesome.com/07696b79f2.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+</head>
+
+<body>
+    <nav class="pcy-calc-nav">
+        <div class="pcy-calc-nav-container">
+            <a class="pcy-calc-nav-logo" href="index.html">계산기</a>
+            
+            <ul class="pcy-calc-nav-link">
+                <li><a href="calc-mg.html">마진율계산기</a></li>
+                <li><a href="rangking.html">랭킹추적</a></li>
+                <li><a href="calc-pf-local.html">순수익계산기(무료)</a></li>
+                <li><a href="calc-pf-json.html">순수익계산기(유료)</a></li>
+                <li><a href="calc-ap.html">상품등록</a></li>
+                <li><a href="calc-am.html">마켓등록</a></li>
+            </ul>
+            
+        </div>
+    </nav>
+    <header>
+    </header>
+
+    <main>
+        <!-- start -->
+        <div class="pcy-container pcy-addProduct-container">
+            
+            <h1>상품등록</h1>
+            
+<!--             
+            복사등록
+ -->
+            <div class="pcy-box pcy-addProduct-box">
+                <div class="pcy-addProduct-header">
+                    <h2>복사등록</h2>
+                </div>
+                <div class="pcy-input-box">
+                    <div class="pcy-addProduct-paste pcy-input" id="pasteItemBox">
+                        <button class="pcy-addProduct-paste-btn "
+                        id="pasteItemBtn">
+                            <i class="fas fa-caret-down fa-2x"></i>
+                        </button>
+                        <ul class="pcy-addProduct-paste-list-Gr pcy-addProduct-paste-content" id="pcy-addProduct-paste-list-Gr"></ul>
+                    </div>
+                </div>
+                <div class="pcy-input-box-footer">
+
+                </div>
+            </div>
+            <!--             
+            오픈마켓
+ -->
+
+            <!--             
+            카테고리
+ -->
+            <div class="pcy-box pcy-addProduct-box">
+                <div class="pcy-addProduct-header">
+                    <h2>카테고리 *</h2>
+                </div>
+                <div class="pcy-addProduct-input-label">
+                    <h3>카테고리검색</h3>
+                </div>
+                <div class="pcy-input-box">
+                <div class="pcy-category-input-box"> 
+                        <input 
+                        class="pcy-addProduct-categoty-input pcy-input" 
+                        placeholder="" 
+                        type="text"
+                        name="categorySearch" 
+                        id="categorySearch" 
+                        />
+                        <ul class="pcy-addProduct-category-list-Gr" id="pcy-addProduct-category-list-Gr"></ul>
+                    </div>
+                </div>
+                <div class="pcy-input-box-footer">
+                    *추후 업데이트시 같은 카테고리의 데이터 분석 자료를 제공할 예정입니다.
+                    *오픈마켓의 소카테고리가 동일하지 않아도 됩니다.
+                </div>
+            </div>
+            <!--             
+            상품명
+ -->
+            <div class="pcy-box pcy-addProduct-box">
+                <div class="pcy-addProduct-header">
+
+                    <h2>상품명 *</h2>
+
+                </div>
+                <div class="pcy-input-box">
+                    <input class="pcy-addProduct-input pcy-input" placeholder="" id="pcy-ap-itemName"/>
+                </div>
+                <div class="pcy-input-box-footer">
+                    *구분하기 쉬운 상품명으로 설정하세요.
+                </div>
+            </div>
+            <!--             
+            상품이미지
+ -->
+            <div class="pcy-box pcy-addProduct-box">
+                <div class="pcy-addProduct-header">
+
+                    <h2>상품이미지 *</h2>
+
+                </div>
+                <div class="pcy-input-box">
+                    <button type="button" class="pcy-addProduct-btn-img"><i class="fas fa-plus fa-3x"></i></button>
+                </div>
+                <div class="pcy-input-box-footer">
+                    <p>권장크기 : 1000 x 1000</p>
+                    <p>jpg, jpeg, png 형식의 정지 이미지만 등록됩니다.</p>
+                </div>
+            </div>
+            <!--             
+            마진액
+ -->
+            <div class="pcy-box pcy-addProduct-box">
+                <div class="pcy-addProduct-header">
+
+                    <h2>마진액 *</h2>
+
+                </div>
+                <div class="pcy-input-box">
+                    <div class="pcy-addProduct-mg-container">
+                        <div class="pcy-addProduct-form-Gr">
+                            <div class="pcy-addProduct-input-Gr">
+                                <div class="pcy-addProduct-mg-box">
+                                    <div class="pcy-addProduct-input-mg-label">
+                                        판매가격
+                                    </div>
+                                    <input class="pcy-addProduct-mg-input pcy-input" placeholder="" id="pcy-ap-sellPrice"/>
+                                </div>
+                                <div class="pcy-addProduct-mg-box">
+                                    <div class="pcy-addProduct-input-mg-label">
+                                        판매자 부담 운임비
+                                    </div>
+                                    <input class="pcy-addProduct-mg-input pcy-input" placeholder="" id="pcy-ap-sellTransUnitCharge"/>
+                                </div>
+                                <div class="pcy-addProduct-mg-box">
+                                    <div class="pcy-addProduct-input-mg-label">
+                                        구매자 부담 운임비
+                                    </div>
+                                    <input class="pcy-addProduct-mg-input pcy-input" placeholder="" id="pcy-ap-realSellTransUnitCharge"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pcy-addProduct-form-Gr">
+                            <div class="pcy-addProduct-input-Gr">
+                                <div class="pcy-addProduct-mg-box">
+                                    <div class="pcy-addProduct-input-mg-label">
+                                        매입가격
+                                    </div>
+                                    <input class="pcy-addProduct-mg-input pcy-input" placeholder="" id="pcy-ap-purchaseCost"/>
+                                </div>
+                                <div class="pcy-addProduct-mg-box">
+                                    <div class="pcy-addProduct-input-mg-label">
+                                        매입 운송비용
+                                    </div>
+                                    <input class="pcy-addProduct-mg-input pcy-input" placeholder="" id="pcy-ap-purchaseTransCharge"/>
+                                </div>
+                                <div class="pcy-addProduct-mg-box">
+                                    <div class="pcy-addProduct-input-mg-label">
+                                        기타비용
+                                    </div>
+                                    <input class="pcy-addProduct-mg-input pcy-input" placeholder="" id="pcy-ap-extraCharge"/>
+                                </div>
+                                <!-- <div class="pcy-addProduct-mg-box">
+                                    <div class="pcy-addProduct-input-mg-label">
+                                        오픈마켓 수수료
+                                    </div>
+                                    <input class="pcy-addProduct-mg-input pcy-input" placeholder="" />
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--             
+            재고수량
+ -->
+            <div class="pcy-box pcy-addProduct-box">
+                <div class="pcy-addProduct-header">
+
+                    <h2>재고수량</h2>
+
+                </div>
+                <div class="pcy-input-box">
+                    <input class="pcy-addProduct-input pcy-input" placeholder="" id="pcy-ap-stockNumber" />
+                </div>
+                <div class="pcy-input-box-footer">
+                    *추후 재고 시스템과 연동됩니다.
+                </div>
+            </div>
+            <!--             
+            푸터
+ -->
+            <div class="pcy-addProduct-save-container">
+                <a href="./calc-am.html" type="button" class="pcy-addProduct-save-btn pcy-addProduct-save-btn-send" id="pcy-ap-save-btn">
+                    다음
+                </a>
+                <button type="button" class="pcy-addProduct-save-btn pcy-addProduct-save-btn-cancle" id="pcy-ap-cancle-btn">
+                    취소
+                </button>
+            </div>
+
+
+        </div>
+    </main>
+    <script src="./calc-ap-pasteItem.js"></script>
+    <script src="./calc-ap-categorySearch.js"></script>
+    <script src="./calc-ap-submit.js"></script>
+    <!-- end -->
+</body>
+
+</html>

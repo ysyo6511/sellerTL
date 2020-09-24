@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/globalstyles.css" />
+    <title>PCY - Calc__CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://kit.fontawesome.com/07696b79f2.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
+
+</head>
+
+<body>
+    <nav class="pcy-calc-nav">
+        <div class="pcy-calc-nav-container">
+            <a class="pcy-calc-nav-logo" href="index.html">계산기</a>
+
+            <ul class="pcy-calc-nav-link">
+                <li><a href="calc-mg.html">마진율계산기</a></li>
+                <li><a href="rangking.html">랭킹추적</a></li>
+                <li><a href="calc-pf-local.html">순수익계산기(무료)</a></li>
+                <li><a href="calc-pf-json.html">순수익계산기(유료)</a></li>
+                <li><a href="calc-ap.html">상품등록</a></li>
+                <li><a href="calc-am.html">마켓등록</a></li>
+            </ul>
+
+        </div>
+    </nav>
+    <div class="pcy-container">
+        <header>
+
+        </header>
+        <main>
+            <div class="pcy-addMarket-container">
+
+                <div class="pcy-addMarket-wrapper pcy-box">
+                    <form class="pcy-addMarket-checkbox-form" id="pcy-addMarket-checkbox-form">
+                        <div class="pcy-addMarket-checkbox-wrapper" id="pcy-addMarket-checkbox-wrapper">
+  
+                        <!-- <div class="pcy-addMarket-checkbox-label-box ">
+                            
+                            <div>
+                                <input type="checkbox" class="pcy-addMarket-checkbox"
+                                    id="pcy-addMarket-checkbox-allMarket" name="checkAll" value="allMarket">
+                                <label class="pcy-addMarket-checkbox-label"
+                                    for="pcy-addMarket-checkbox-allMarket"
+                                    onclick="checkMarketData('')"
+                                    ></label>
+                            </div>
+                            <div class="pcy-addmarket-btn-container">
+                            <span 
+                            class="pcy-addMarket-checkbox-label" 
+                            id="pcy-addMarket-checkbox-label-allMarket"
+                            onclick="storeClick('allMarket');clickLabel('allMarket')"
+                            >전체</span>
+                        </div>
+                        </div>
+                        <div class="pcy-addMarket-checkbox-label-box">
+                            <div>
+                                <input type="checkbox" class="pcy-addMarket-checkbox" id="pcy-addMarket-checkbox-naver"
+                                    name="checkOne" value="naverStore">
+                                
+                                <label class="pcy-addMarket-checkbox-label" for="pcy-addMarket-checkbox-naver"
+                                onclick="checkMarketData(foundValue)"></label>
+                            </div>
+                            <div class="pcy-addmarket-btn-container">
+
+                            <span 
+                                type="button" 
+                                class="pcy-addMarket-checkbox-label"
+                                id="pcy-addMarket-checkbox-label-naver"
+                                onclick="clickLabel('naver')"
+                                >네이버스토어팜
+                            </span>
+                            <button type="button" onclick="storeClick('naver');clickLabel()">수정</button>
+                        </div>
+                        </div>
+                        <div class="pcy-addMarket-checkbox-label-box">
+                            <div>
+                                <input type="checkbox" class="pcy-addMarket-checkbox"
+                                    id="pcy-addMarket-checkbox-coupang" name="checkOne" value="coupangStore">
+                                <label class="pcy-addMarket-checkbox-label"
+                                    for="pcy-addMarket-checkbox-coupang"
+                                    onclick="checkMarketData(foundValue)"></label>
+                            </div>
+                            <div class="pcy-addmarket-btn-container">
+                            <span type="button" class="pcy-addMarket-checkbox-label" 
+                            id="pcy-addMarket-checkbox-label-coupang" 
+                            onclick="storeClick('coupang');clickLabel('coupang')"
+                            >쿠팡</span>
+                            <button type="button" onclick="clickLabel()">수정</button>
+                        </div>
+                        </div>
+                        <div class="pcy-addMarket-checkbox-label-box">
+                            <div>
+                                <input type="checkbox" class="pcy-addMarket-checkbox"
+                                    id="pcy-addMarket-checkbox-gmarket" name="checkOne" value="gmarketStore">
+                                <label class="pcy-addMarket-checkbox-label"
+                                    for="pcy-addMarket-checkbox-gmarket"
+                                    onclick="storeClick('gmarket');checkMarketData(foundValue)"></label>
+                            </div>
+                            <div class="pcy-addmarket-btn-container">
+                            <span type="button" class="pcy-addMarket-checkbox-label" 
+                            id="pcy-addMarket-checkbox-label-gMarket" 
+                            onclick="storeClick('gmarket');clickLabel('gmarket')"
+                            >G마켓</span>
+                            <button type="button" onclick="clickLabel()">수정</button>
+                        </div> -->
+                    <!-- </div>
+                        <div class="pcy-addMarket-checkbox-label-box">
+                            <div>
+                                <input type="checkbox" class="pcy-addMarket-checkbox"
+                                    id="pcy-addMarket-checkbox-auction" name="checkOne" value="auctionStore">
+                                <label class="pcy-addMarket-checkbox-label"
+                                    for="pcy-addMarket-checkbox-auction"
+                                    onclick="storeClick('auction');checkMarketData(foundValue)"></label>
+                            </div>
+                            <div class="pcy-addmarket-btn-container">
+                            <span type="button" class="pcy-addMarket-checkbox-label" 
+                            id="pcy-addMarket-checkbox-label-auction"
+                            onclick="storeClick('auction');clickLabel('auction')"
+                             >옥션</span>
+                             
+                             <button type="button" onclick="clickLabel()">수정</button>
+                             
+                            </div>
+
+                        </div> -->
+                        
+                    </div>
+                    <span class="pcy-addMarket-popover-box">?<span class="pcy-addMarket-popover"><p>1. 사용하시는 마켓을 체크해주세요</p><p>2.마켓을 클릭하시면 수정하실 수 있습니다.</p></span></span>
+                    
+    
+                    </form>
+                </div>
+                <div class="pcy-addMarket-wrapper pcy-box">
+                    <div class="pcy-addMarket-item-box-display">
+                        <div class="pcy-addMarket-item-box" id="pcy-addMarket-item-box">
+                            <h1 class="pcy-addMarket-storename">SAMMAI</h1>
+                            <img class="pcy-addMarket-img"
+                                src="https://shopping-phinf.pstatic.net/main_8248047/82480471955.1.jpg">
+                            <div class="pcy-addMarket-category">생활/건강>수집품>무선/RC>드론</div>
+                            <div class="pcy-addMarket-item-label">S2 GPS 드론 촬영용 가성비 고급</div>
+                        </div>
+                    </div>
+
+
+                    <div class="pcy-addMarket-item-box-display-clicked" id="pcy-addMarket-item-box-display-clicked">
+                        <h1 class="pcy-addMarket-marketname-clicked" id="pcy-addMarket-marketname-clicked">SAMMAI</h1>
+                        <div class="pcy-addMarket-item-box-clicked">
+                            <img class="pcy-addMarket-img-clicked"
+                                src="https://shopping-phinf.pstatic.net/main_8248047/82480471955.1.jpg">
+                            <div class="pcy-addMarket-category-header-clicked">
+                                <div class="pcy-addMarket-category-clicked">생활/건강>수집품>무선/RC>드론</div>
+                                <div class="pcy-addMarket-item-label-clicked">S2 GPS 드론 촬영용 가성비 고급</div>
+                            </div>
+                        </div>
+                        <div class="pcy-addProduct-mg-container">
+                            <div class="pcy-addProduct-form-Gr">
+                                <div class="pcy-addProduct-input-Gr">
+                                    <div class="pcy-addProduct-mg-box">
+                                        <div class="pcy-addProduct-input-mg-label">
+                                            매입가격
+                                        </div>
+                                        <input class="pcy-addProduct-mg-input pcy-input" placeholder="110000" 
+                                        id="pcy-am-checkbox-purchaseCost"/>
+                                    </div>
+                                    <div class="pcy-addProduct-mg-box">
+                                        <div class="pcy-addProduct-input-mg-label">
+                                            매입 운송비용
+                                        </div>
+                                        <input class="pcy-addProduct-mg-input pcy-input" placeholder="10400" 
+                                        id="pcy-am-checkbox-purchaseTransCharge"/>
+                                    </div>
+                                    <div class="pcy-addProduct-mg-box">
+                                        <div class="pcy-addProduct-input-mg-label">
+                                            기타비용
+                                        </div>
+                                        <input class="pcy-addProduct-mg-input pcy-input" placeholder="0" 
+                                        id="pcy-am-checkbox-extraCharge"/>
+                                    </div>
+                                    <div class="pcy-addProduct-mg-box">
+                                        <div class="pcy-addProduct-input-mg-label">
+                                            오픈마켓 수수료
+                                        </div>
+                                        <input class="pcy-addProduct-mg-input pcy-input" placeholder="3.4%" 
+                                        id="pcy-am-checkbox-marketFee"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pcy-addProduct-form-Gr">
+                                <div class="pcy-addProduct-input-Gr">
+                                    <div class="pcy-addProduct-mg-box">
+                                        <div class="pcy-addProduct-input-mg-label">
+                                            판매가격
+                                        </div>
+                                        <input class="pcy-addProduct-mg-input pcy-input" placeholder="210000" 
+                                        id="pcy-am-checkbox-sellprice"/>
+                                    </div>
+                                    <div class="pcy-addProduct-mg-box">
+                                        <div class="pcy-addProduct-input-mg-label">
+                                            판매자 부담 운임비
+                                        </div>
+                                        <input class="pcy-addProduct-mg-input pcy-input" placeholder="0" 
+                                        id="pcy-am-checkbox-realSellTransUnitCharge"/>
+                                    </div>
+                                    <div class="pcy-addProduct-mg-box">
+                                        <div class="pcy-addProduct-input-mg-label">
+                                            구매자 부담 운임비
+                                        </div>
+                                        <input class="pcy-addProduct-mg-input pcy-input" placeholder="0" 
+                                        id="pcy-am-checkbox-sellTransUnitCharge"/>
+                                    </div>
+                                    <div class="pcy-addProduct-mg-btn-box">
+                                        <button
+                                        class="pcy-btn pcy-addProduct-save-btn"
+                                        id="pcy-am-checkbox-save"
+                                        onclick="saveMarketValue()"
+                                        >
+                                            저장하기
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="pcy-addProduct-save-container">
+                    <button type="button" class="pcy-addProduct-save-btn pcy-addProduct-save-btn-send" id="pcy-ap-save-btn" onclick="saveCalcData()">
+                        저장
+                    </button>
+                    <button type="button" class="pcy-addProduct-save-btn pcy-addProduct-save-btn-cancle" id="pcy-ap-cancle-btn">
+                        취소
+                    </button>
+                </div>
+            </div>
+            <!-- <div class="pcy-addMarket-wrapper pcy-box">
+                
+            </div> -->
+        </main>
+    </div>
+    <script type="text/javascript" src="calc-itemsData.js"></script>
+    <script type="text/javascript" src="calc-am-checkbox.js"></script>
+    <script type="text/javascript" src="calc-am-clickedDisplay.js"></script>
+    <script type="text/javascript" src="calc-am-checkedMarket.js"></script>
+    <script type="text/javascript" src="calc-am-newcheckedMarket.js"></script>
+</body>
+
+</html>

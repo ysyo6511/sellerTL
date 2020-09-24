@@ -1,0 +1,277 @@
+.pcy-addMarket-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding-bottom: 60px;
+    margin:auto;
+}
+
+.pcy-addMarket-wrapper{
+    width:96%;
+    padding-bottom: 30px;
+    font-weight: 600;
+    
+}
+.pcy-addMarket-item-box{
+    display: block;
+    text-align: center;
+    transition:1s all; 
+}
+
+.pcy-addMarket-storename{
+    margin:25px 0;
+}
+
+.pcy-addMarket-img{
+    margin-bottom: 30px;
+    text-align: center;
+    vertical-align: middle;
+    object-fit: contain;
+    width: 80%;
+    border:2px solid #002c40;
+    height: auto;
+    transition:1s;
+}
+
+.pcy-addMarket-category{
+    margin-bottom: 15px;
+}
+
+.pcy-addMarket-item-label{
+font-size:1.6rem;
+}
+
+.pcy-addMarket-checkbox-label .pcy-addMarket-checkbox-label-tooltip{
+    visibility: hidden;
+    width: 120px;
+    background-color: #002c40;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.pcy-addMarket-checkbox-label:hover{
+    visibility: visible;
+}
+
+.pcy-addMarket-checkbox-form{
+    margin:30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pcy-addMarket-checkbox-wrapper{
+    width: 100%;
+}
+.pcy-addMarket-checkbox + .pcy-addMarket-checkbox-label {
+     display: block;
+     padding-right:10px;
+     cursor: pointer;
+     /* padding: 0.2em; */
+ }
+.pcy-addMarket-checkbox {
+     display: none;
+ }
+
+ .pcy-addMarket-checkbox-label-box{
+     
+     display: flex;
+     margin:1rem;
+     font-size:1rem;
+ }
+ .pcy-addMarket-checkbox-label{
+     cursor: pointer;
+ }
+.pcy-addMarket-checkbox + .pcy-addMarket-checkbox-label:before {
+     content: "\2714";
+     text-align:center;
+     vertical-align: middle;
+     border: 2px solid #000;
+     border-radius: 4px;
+     display: inline-block;
+     width: 1em;
+     height: 1em;
+     vertical-align: bottom;
+     color: transparent;
+     transition: .2s;
+ }
+.pcy-addMarket-checkbox + .pcy-addMarket-checkbox-label:active:before {
+     transform: scale(0);
+ }
+.pcy-addMarket-checkbox:checked + .pcy-addMarket-checkbox-label:before {
+     background-color: #002c40;
+     border-color: #002c40;
+     color: #fff;
+ }
+
+ .pcy-addMarket-marketname-clicked{
+     text-align: center;
+     margin:25px 0;
+ }
+ .pcy-addMarket-item-box-display-clicked{
+     display:none;
+     translate: 1s;
+ }
+ .pcy-addMarket-item-box-clicked{
+     display: flex;
+     
+ }
+ .pcy-addMarket-img-clicked{
+    margin-bottom: 30px;
+    text-align: center;
+    vertical-align: middle;
+    object-fit: contain;
+    width: 30%;
+    border:2px solid #002c40;
+    height: 30%;
+    transition:1s;
+ }
+
+ .pcy-addMarket-category-header-clicked{
+     font-size:1rem;
+     padding: 0 15px;
+ }
+
+ .pcy-addMarket-category-clicked{
+     margin-bottom:6px;
+     opacity: 0.8;;
+ }
+
+ .pcy-addMarket-item-label-clicked{
+     font-size:22px;
+ }
+
+ .pcy-addmarket-btn-container{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pcy-addMarket-check-btn{
+    padding: 2px 4px;
+    background-color: transparent;
+    font-size:1rem;
+    outline: none;
+    color:#002c40;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.pcy-addMarket-check-btn:nth-child(5){
+    display: none;
+
+}
+
+/* popover */
+ .pcy-addMarket-popover-box {
+    position: relative;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    background-color: #002c40;
+    color:white;
+    border-radius: 10px;
+ }
+    .pcy-addMarket-popover-box .pcy-addMarket-popover {
+      background-color: #002c40;
+      border-radius: 4px;
+      bottom: 27px;
+      left:-100px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.4);
+      color: #fff;
+      display: none;
+      font-size:12px;
+      padding: 12px 24px;
+      position: absolute;
+      width: 220px;
+      z-index: 4;
+    }
+
+    .pcy-addMarket-popover:before{
+          border-top: 7px solid rgba(0,0,0,0.85);
+          border-right: 7px solid transparent;
+          border-left: 7px solid transparent;
+          bottom: -7px;
+          content: '';
+          display: block;
+          left: 50%;
+          margin-left: -7px;
+          position: absolute;
+    }
+
+   
+
+    .pcy-addMarket-popover-box:hover .pcy-addMarket-popover {
+          display: block;
+          -webkit-animation: fade-in .3s linear 1, move-up .3s linear 1;
+        
+    }
+
+    .pcy-addProduct-mg-btn-box{
+        padding-top:22px;
+        width: 100%;
+        text-align: right;
+        height: auto;
+
+    }
+
+    .pcy-addProduct-mg-btn-box .pcy-btn{
+        cursor: pointer;
+        width: 100%;
+
+        margin:0px;
+        padding:6px 12px;
+    }
+
+    @-webkit-keyframes fade-in {
+        from   { opacity: 0; }
+        to { opacity: 1; }
+    }
+  
+    @-webkit-keyframes move-up {
+        from   { bottom: 20px; }
+        to { bottom: 27px; }
+    }
+
+    
+@media (max-width: 600px) {
+    .pcy-addMarket-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    
+    .pcy-addMarket-wrapper{
+        width:100%;
+        /* height:600px; */
+        padding-bottom: 30px;        
+    }
+    .pcy-addMarket-container .pcy-box{
+        margin:0.6rem 0;
+    }
+/* popover */
+    .pcy-pf-popover-box .pcy-pf-popover {
+        left:-166px;
+  
+      }
+
+    .pcy-pf-popover:before{
+        border-top: 7px solid rgba(0,0,0,0.85);
+        border-right: 7px solid transparent;
+        border-left: 7px solid transparent;
+        bottom: -7px;
+        content: '';
+        display: block;
+        left: 80%;
+        margin-left: -7px;
+        position: absolute;
+  }
+}
+    
+    
+      
+
